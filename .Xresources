@@ -1,99 +1,79 @@
-Xft.dpi:96
-Xft.antialias:true
-Xft.rgba:rgb
-Xft.hinting:true
-Xft.hintstyle:hintslight
+! Base colors
+*.foreground:  #E1E1E1
+*.background:  #1c2023
+*.cursorColor: #778899
 
-URxvt.loginShell:true
-URxvt.inputMethod:fcitx
-URxvt.depth:32
+*.color0:  #1c2023
+*.color1:  #bf616a
+*.color2:  #a3be8c
+*.color3:  #ebcb8b
+*.color4:  #8fa1b3
+*.color5:  #b48ead
+*.color6:  #96b5b4
+*.color7:  #E1E1E1
+*.color8:  #919ba0
+*.color9:  #bf616a
+*.color10: #a3be8c
+*.color11: #ebcb8b
+*.color12: #8fa1b3
+*.color13: #b48ead
+*.color14: #96b5b4
+*.color15: #c0c5ce
 
-URxvt.mouseWheelScrollPage:true
-URxvt.scrollBar:false
-URxvt.scrollBar_floating:false
-URxvt.scrollstyle:rxvt
-URxvt.scrollTtyOutput:false
-URxvt.scrollWithBuffer:true
-URxvt.scrollTtyKeypress:true
+! Rofi
+rofi.font: monospace 12
+rofi.padding: 20
+rofi.line-padding: 2
+rofi.color-enabled: true
+rofi.hide-scrollbar: true
+rofi.separator-style: solid
+rofi.color-window: #1c2023, #919ba0, #1c2023
+rofi.color-normal: #1c2023, #919ba0, #1c2023, #a4a4a4, #1c2023
+rofi.color-urgent: argb:00000000, #f43753, argb:00000000, argb:00000000, #e29a49
+rofi.color-active: argb:00000000, #49bbfb, argb:00000000, argb:00000000, #e29a49
+rofi.kb-cancel: Escape,Alt+F1
 
-URxvt.cursorBlink:true
-URxvt.cursorUnderline:false
+! xterm
+xterm*termName: xterm-256color
+xterm*font: monospace
+xterm*faceName: monospace:size=11
+xterm*loginShell: true
+xterm*vt100*geometry: 90x34
+xterm*saveLines: 2000
+xterm*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
+xterm*eightBitInput: false
 
-URxvt.saveLines:100
-URxvt.borderLess:false
-
-URxvt.allow_bold:false
-URxvt.font:xft:monospace:size=9
-!URxvt.boldfont:xft:Source Code Pro:style=Regular:antialias=True:size=12,xft:Source Han Sans CN:style=Regular:size=12
-
-!URxvt.inheritPixmap:false
-URxvt.transparent:false
-URxvt.shading:20
-URxvt.intensityStyles: false
+! URxvt
+URxvt*saveline: 15000
+URxvt*termName: rxvt-256color
+URxvt*iso14755: false
+URxvt*depth: 32
+URxvt*background: [95]#1C2023
+URxvt*scrollBar: false
+URxvt*scrollBar_right: false
+URxvt*internalBorder: 0
+URxvt*externalBorder: 0
+URxvt*letterSpace: -1
+!URxvt*font: xft: Droid Sans Mono for Powerline Plus Nerd File Types Mono : size=11
+!URxvt.font: xft:FiraCode Nerd Font Mono:size=11
+URxvt.font: xft:RobotoMono Nerd Font Mono:style=bold :size=11
+URxvt.copyCommand: xclip -i -selection clipboard
+URxvt.pasteCommand: xclip -o -selection clipboard
+URxvt.urlLauncher: exo-open
+URxvt.underlineURLs: true
+URxvt.urlButton: 1
+URxvt.geometry: 90x34
+URxvt.tabbed.tabbar-fg: 4
+URxvt.tabbed.tabbar-bg: 16
+URxvt.tabbed.tab-fg: 15
+URxvt.tabbed.tab-bg: 4
+URxvt*buffered: false
 
 URxvt.perl-ext-common: default,matcher,font-size
-URxvt.url-launcher: /usr/bin/google-chrome-stable
+URxvt.url-launcher: /usr/bin/qutebrowser
 URxvt.matcher.button: 1
 
 !https://github.com/majutsushi/urxvt-font-size
 URxvt.keysym.C-Up:     font-size:increase
 URxvt.keysym.C-Down:   font-size:decrease
 URxvt.keysym.C-equal:  font-size:reset
-
-!!######################### Colorscheme settings ########################!
-#define S_base03        #000000
-#define S_base02        #50a6e1
-#define S_base01        #586e75
-#define S_base00        #657b83
-#define S_base0         #f0f6f7 
-#define S_base1         #93a1a1
-#define S_base2         #eee8d5
-#define S_base3         #fdf6e3
-
-URxvt.background:            [60]S_base03
-URxvt.foreground:            S_base0
-URxvt.fadeColor:             S_base03
-URxvt.cursorColor:           S_base1
-URxvt.pointerColorBackground:S_base01
-URxvt.pointerColorForeground:S_base1
-
-#define S_yellow        #b58900
-#define S_orange        #cb4b16
-#define S_red           #dc322f
-#define S_magenta       #d33682
-#define S_violet        #6c71c4
-#define S_blue          #268bd2
-#define S_cyan          #2aa198
-#define S_green         #50a6e1
-
-!! black dark/light
-*color0:                S_base02
-*color8:                S_base03
-
-!! red dark/light
-*color1:                S_red
-*color9:                S_orange
-
-!! green dark/light
-*color2:                S_green
-*color10:               S_base01
-
-!! yellow dark/light
-*color3:                S_yellow
-*color11:               S_base00
-
-!! blue dark/light
-*color4:                S_blue
-*color12:               S_base01
-
-!! magenta dark/light
-*color5:                S_magenta
-*color13:               S_violet
-
-!! cyan dark/light
-*color6:                S_cyan
-*color14:               S_base1
-
-!! white dark/light
-*color7:                S_base2
-*color15:               S_base3
