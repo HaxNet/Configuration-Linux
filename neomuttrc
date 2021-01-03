@@ -70,6 +70,4 @@ macro index,pager <f7> '<sync-mailbox><enter-command>source ~/.mutt/acct<enter><
 #Address Book aka alias
 alias HaxNet HaxNet <haxnet@techie.com>
 alias HaxNet HaxNet <haxnet@cock.li>
-alias SimonSayz SimonSayz <simonsayz@gmx.com>
-alias "Simon Wong" <simon@accountingproperties.com>
 
