@@ -5,13 +5,6 @@ source "~/.mutt/techie"
 #folder-hook 'source ~/.mutt/techie'
 #folder-hook 'set realname="HaxNet"'
 
-#source "~/.mutt/gmx"
-#folder-hook 'source ~/.mutt/gmx'
-#folder-hook 'set realname="SimonSayz"'
-
-
-#source "~/.mutt/420blaze"
-#source "~/.mutt/acct"
 
 
 # Mail Editor
