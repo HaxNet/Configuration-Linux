@@ -39,7 +39,7 @@ c.editor.command = ["urxvtc", "-e", "nvim", "{}"]
 c.scrolling.smooth = True
 
 
-c.url.start_pages = ["https://parler.com","https://dev.to/haxnet"]
+c.url.start_pages = ["https://tekniq.xyz","https://parler.com","https://dev.to/haxnet"]
 
 # search engine shortneners
 c.url.searchengines ={
@@ -49,7 +49,7 @@ c.url.searchengines ={
 }
 
 
-#colors
+#colours
 c.colors.completion.fg = "#ffffff"
 c.colors.completion.even.bg = "#262626"
 c.colors.completion.odd.bg = "#000000"
@@ -74,3 +74,8 @@ c.colors.hints.fg = "#000000"
 c.colors.hints.bg = "#DBFD45"
 c.colors.hints.match.fg = "#ffffff"
 c.colors.downloads.bar.bg = "#000000"
+
+
+#config.set("colors.webpage.darkmode.enabled",True)
+
+
