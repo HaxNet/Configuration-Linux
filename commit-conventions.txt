@@ -8,7 +8,7 @@
 #   * ci           Changes to CI pipeline/workflow
 # ----------------------------------------------------------
 
-
+git config --global core.editor 'vim +11 +startinsert'
 
 # ----------------------------------------------------------
 # Body - More detailed description, if necessary
