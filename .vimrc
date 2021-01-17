@@ -17,26 +17,59 @@ runtime! archlinux.vim
 " do not load defaults if ~/.vimrc is missing
 "let skip_defaults_vim=1
 "
-
-"packadd! dracula
-"colorscheme thinkpad
-colorscheme nord
-"colorscheme dracula
-
 syntax on
-set number
-highlight Normal ctermbg=Black
+set number relativenumber
+"packadd! dracula
+"colo dracula
 set hls!
-highlight Search ctermbg=LightBlue
 
-"<Ctrl-l> redraws the screen and removes any search highlighting."
-nnoremap <silent> <C-l> :nohl<CR><C-l>
+nnoremap <silent><C-l> :nohl<CR><C-l>
+set clipboard^=unnamed
 
-set printexpr=PrintFile(v:fname_in)
-function PrintFile(fname)
-	call system("a2ps " . a:fname)
-	call delete(a:fname)
-	return v:shell_error
-endfunc
+call plug#begin('~/.vim/plugged')
+Plug 'sheerun/vim-polyglot'
+Plug 'vim-airline/vim-airline'
+Plug 'ghifarit53/tokyonight-vim'
+call plug#end()
+
+let g:tokyonight_style= 'storm' "available: night, storm
+let g:tokyonight_enable_italic=1
+let g:airline_powerline_fonts=1
+let g:airline_theme="tokyonight"
+
+let g:tokyonight_transparent_background=1
 
 
+colorscheme tokyonight
+
+
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+
+
+
+" unicode symbols
+let g:airline_left_sep = '»'
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '«'
+let g:airline_right_sep = '◀'
+let g:airline_symbols.linenr = '␊'
+let g:airline_symbols.linenr = '␤'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.paste = 'Þ'
+let g:airline_symbols.paste = '∥'
+let g:airline_symbols.whitespace = 'Ξ'
+
+
+
+" airline symbols
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = ''
