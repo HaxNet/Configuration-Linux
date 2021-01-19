@@ -121,7 +121,36 @@ alias search='pacman -Ss'
 alias i3config='vim ~/.config/i3/config'
 alias Xconfig='vim ~/.Xresources'
 alias reload='xrdb ~/.Xresources'
-alias weather='weather-report'
+alias weather='weather-report 18040'
+alias neomuttrc='vim ~/.config/neomutt/neomuttrc'
+alias matrix='cmatrix -a -r'
+alias remindadd='vim ~/.config/remind/reminders.rem +10 +startinsert'
+alias remindv='remind ~/.config/remind/reminders.rem'
+alias remindc='remind -c1 ~/.config/remind/reminders.rem'
+alias calc='gcalccmd'
+
+urlencode(){
+  declare str="$*"
+  declare encoded=""
+  declare i c x
+  for ((i=0; i<${#str}; i++ )); do
+    c=${str:$i:1}
+    case "$c" in
+      [-_.~a-zA-Z0-9] ) x="$c" ;;
+      * ) printf -v x '%%%02x' "'$c";;
+    esac
+    encoded+="$x"
+  done
+  echo "$encoded"
+}
+
+duck(){
+  declare url=$(urlencode "$*")
+  lynx "https://duckduckgo.com/lite?q=$url"
+}
+
+alias "?"=duck
+
 
 
 
@@ -143,9 +172,9 @@ lfcd () {
     fi
 }
 bindkey -s '^o' 'lfcd\n'
-#bindkey -s '^n' 'ncmpcpp -S visualizer\n'
+bindkey -s '^n' 'ncmpcpp -S visualizer\n'
 bindkey -s '^e' 'neomutt\n'
-bindkey -s '^n' 'ncmpcpp\n'
+#bindkey -s '^n' 'ncmpcpp\n'
 # Load zsh-syntax-highlighting; should be last.
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 
 
@@ -161,6 +190,5 @@ compinit
 #
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
 
 
