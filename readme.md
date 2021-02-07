@@ -1,3 +1,3 @@
-![](http://uoxqi4lrfqztugili7zzgygibs4xstehf5hohtkpyqcoyryweypzkwid.onion/?img=481612723513.png)
+[![Tek-Ni-Q-figlet.png](https://i.postimg.cc/JhXW5CJH/Tek-Ni-Q-figlet.png)](https://postimg.cc/jWR9R9MR)
 
 My custom config files
