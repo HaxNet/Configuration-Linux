@@ -1,0 +1,5 @@
+#!/bin/zsh
+
+echo "open -t https://translate.google.com/?sl=es&tl=en&text=$QUTE_SELECTED_TEXT%0A&op=translate" >> "$QUTE_FIFO"
+
+
