@@ -1,0 +1,25 @@
+# ----------------------------------------------------------
+# Header - (type): Brief description
+# ----------------------------------------------------------
+#   * docs         Changes to documentation only
+#   * style        Style/format changes (whitespace, etc.)
+#   * test         Changes that add/modify/correct tests
+#   * build        Changes to build system (configs, etc.)
+#   * ci           Changes to CI pipeline/workflow
+# ----------------------------------------------------------
+
+git config --global core.editor 'vim +11 +startinsert'
+
+# ----------------------------------------------------------
+# Body - More detailed description, if necessary
+# ----------------------------------------------------------
+#   * Motivation behind changes, more detail into how 
+# functionality might be affected, etc.
+# ----------------------------------------------------------
+
+
+# ----------------------------------------------------------
+# Footer - Associated issues, PRs, etc.
+# ----------------------------------------------------------
+#   * Ex: Resolves Issue #207, see PR #15, etc.
+# ----------------------------------------------------------

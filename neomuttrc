@@ -1,0 +1,66 @@
+# Mutt configuration template
+
+##accounts
+source "~/.mutt/techie"
+#folder-hook 'source ~/.mutt/techie'
+#folder-hook 'set realname="HaxNet"'
+
+
+
+# Mail Editor
+set editor=vim
+
+# Display Sidebar
+set sidebar_width=20
+set sidebar_visible=yes
+
+#colors
+source dracula.muttrc
+#source color.muttrc
+
+#date format
+set index_format = "%4C |%Z| %D %-20.20F %s"
+set date_format ="%M %D %I:%M%p"
+
+set forward_format = "Fwd: %s"
+
+set mailcap_path = /etc/mailcap
+
+auto_view text/html	# automatically show html (mailcap uses w3m)
+auto_view application/pgp-encrypted
+alternative_order text/html text/plain text/enriched text/*
+#alternative_order text/plain text/enriched text/html
+
+# If hcache is a folder, Mutt will create sub cache folders for each account which may speeds things up even more
+set header_cache = "~/.cache/mail/headers"
+
+# Store messages locally to speed things up, like searching message bodies.
+set message_cachedir = "~/.cache/mail/bodies"
+
+# Sidebar navigation
+
+bind index,pager g noop
+bind index,pager M noop
+bind index,pager C noop
+bind index gg first-entry
+
+macro index gi "<change-folder>=INBOX<enter>" "Go to inbox"
+macro index gs "<change-folder>=Sent<enter>" "Go to sent"
+macro index gd "<change-folder>=Drafts<enter>" "Go to drafts"
+macro index gj "<change-folder>=Junk<enter>" "Go to Junk"
+macro index gt "<change-folder>=Trash<enter>" "Go to trash"
+macro index \cb |urlview\n
+macro pager \cb |urlview\n
+
+bind index R group-reply
+
+
+macro index,pager <f4> '<sync-mailbox><enter-command>source ~/.mutt/cock.li<enter><change-folder>!<enter>'
+macro index,pager <f5> '<sync-mailbox><enter-command>source ~/.mutt/techie<enter><change-folder>!<enter>'
+macro index,pager <f6> '<sync-mailbox><enter-command>source ~/.mutt/gmx<enter><change-folder>!<enter>'
+macro index,pager <f7> '<sync-mailbox><enter-command>source ~/.mutt/acct<enter><change-folder>!<enter>'
+
+#Address Book aka alias
+alias HaxNet HaxNet <haxnet@techie.com>
+alias HaxNet HaxNet <haxnet@cock.li>
+
